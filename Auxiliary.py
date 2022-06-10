@@ -251,7 +251,8 @@ def plot_KGE(new_df, entity_type):
 
     # define and map colors
     index = list(new_df.cls.unique())
-    col = list(colors.cnames.values())[:len(index)]
+    col = list(colors.cnames.values())[2:len(index) + 2]
+    # col = mcolors.CSS4_COLORS['brown']
     color_dictionary = dict(zip(index, col))
     new_df['c'] = new_df.cls.map(color_dictionary)
     #####PLOT#####
